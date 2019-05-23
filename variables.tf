@@ -7,8 +7,3 @@ variable "pipeline_name" {
   type        = "string"
   description = "Name of the pipeline to send notifications from"
 }
-
-variable "environment" {
-  type        = "list"
-  description = "The environment being deployed e.g. dev/test"
-}

@@ -25,7 +25,6 @@ module "slacknotifier" {
 | ------------- | ------------------------------------------------------------------- | :----: | :-----: | :------: |
 | function_name | The name of the lambda function which calls incoming slack webhook  | string |    -    |   yes    |
 | pipeline_name | The name of the codebuild pipeline which will notifiy the SNS topic |  list  |    -    |   yes    |
-| environment   | The environment e.g. dev/test                                       | string |    -    |   yes    |
 
 ## Outputs
 

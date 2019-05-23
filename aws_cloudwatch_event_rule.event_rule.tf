@@ -1,5 +1,5 @@
 resource "aws_cloudwatch_event_rule" "event_rule" {
-  name        = "${var.name + var.environment}"
+  name        = "${var.name}"
   description = "Capture each AWS Console Sign In"
 
   event_pattern = <<PATTERN
