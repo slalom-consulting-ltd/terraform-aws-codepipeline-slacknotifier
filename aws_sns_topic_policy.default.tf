@@ -26,7 +26,7 @@ resource "aws_sns_topic_policy" "default" {
       "Resource": "${aws_sns_topic.slack_notifier.arn}",
       "Condition": {
         "StringEquals": {
-          "AWS:SourceOwner": "553700203877"
+          "AWS:SourceOwner": "${var.aws_account_no}"
         }
       }
     },
