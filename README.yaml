@@ -36,11 +36,6 @@ references:
   - name: "Wikipedia - Test Harness"
     description: 'The `build-harness` is similar in concept to a "Test Harness"'
     url: "https://en.wikipedia.org/wiki/Test_harness"
-# Screenshots
-screenshots:
-  - name: "demo"
-    description: "Example of using the `build-harness` to build a docker image"
-    url: "https://cdn.rawgit.com/cloudposse/build-harness/master/docs/demo.svg"
 # Short description of this project
 description: |-
   A collection of AWS resources to send AWS [`Codebuild`](https://aws.amazon.com/codebuild/) build success/failure's to slack using a Lambda function.
@@ -62,7 +57,7 @@ quickstart: |-
   TODO
 # Other files to include in this README from the project folder
 include:
-  - "docs/targets.md"
+  - "docs/terraform.md"
 # Contributors to this project
 contributors:
   - name: "Matt Childs"

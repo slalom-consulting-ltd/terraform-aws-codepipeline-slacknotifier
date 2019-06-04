@@ -2,7 +2,7 @@
 
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-codepipeline-slacknotifier
+terraform-aws-codepipeline-slacknotifier
 
  [![terraform-aws-codepipeline-slacknotifier](https://travis-ci.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier.svg?branch=master)](https://travis-ci.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier) [![Latest Release](https://img.shields.io/github/release/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier.svg)](https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier/releases/latest)
 
@@ -14,11 +14,6 @@ This project uses the "build-harness" a modified version of the project ["SweetO
 
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
-## Screenshots
-
-![demo](https://cdn.rawgit.com/cloudposse/build-harness/master/docs/demo.svg)
-*Example of using the `build-harness` to build a docker image*
-
 ## Introduction
 
 Some text here
@@ -26,7 +21,7 @@ Some text here
 ## Usage
 
 TODO
-**NOTE:** the `/` is interchangable with the `:` in target names
+**NOTE:** the `/` is inter-changable with the `:` in target names
 
 ## Quick Start
 
@@ -40,18 +35,13 @@ Here are some real world examples:
 - [`bastion`](https://github.com/cloudposse/bastion/) - A docker image that leverages `docker/%` and `bash/lint` targets
 - [`terraform-null-label`](https://github.com/cloudposse/terraform-null-label/) - A terraform module that leverages `terraform/%` targets
 
-## Makefile Targets
+## Inputs
 
-```
-Available targets:
-
-  help                                Help screen
-  help/all                            Display help for all targets
-  help/short                          This help short screen
-  lint:
-                              Lint terraform code
-
-```
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-----:|:-----:|
+| aws\_account\_no |  | string | n/a | yes |
+| function\_name | Name of Lambda function which will be used to notify slack incoming webhook. | string | n/a | yes |
+| pipeline\_name | Name of the pipeline to send notifications from | string | n/a | yes |
 
 ## Related Projects
 
