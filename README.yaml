@@ -1,0 +1,66 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+# Name of this project
+name: terraform-aws-codepipeline-slacknotifier
+# Logo for this project
+#logo: docs/slalom-logo.png
+# License of this project
+license: "APACHE2"
+# Copyrights
+copyrights:
+  - name: "Slalom, LLC"
+    url: "https://slalom.com"
+    year: "2019"
+# Canonical GitHub repo
+github_repo: slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier
+# Badges to display
+badges:
+  - name: "terraform-aws-codepipeline-slacknotifier"
+    image: "https://travis-ci.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier.svg?branch=master"
+    url: "https://travis-ci.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier"
+  - name: "Latest Release"
+    image: "https://img.shields.io/github/release/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier.svg"
+    url: "https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier/releases/latest"
+related:
+  - name: "Packages"
+    description: "Cloud Posse installer and distribution of native apps"
+    url: "https://github.com/cloudposse/packages"
+  - name: "Dev Harness"
+    description: "Cloud Posse Local Development Harness"
+    url: "https://github.com/cloudposse/dev"
+# References
+references:
+  - name: "Wikipedia - Test Harness"
+    description: 'The `build-harness` is similar in concept to a "Test Harness"'
+    url: "https://en.wikipedia.org/wiki/Test_harness"
+# Short description of this project
+description: |-
+  A collection of AWS resources to send AWS [`Codebuild`](https://aws.amazon.com/codebuild/) build success/failure's to slack using a Lambda function.
+# Introduction to the project
+introduction: |-
+  Some text here
+usage: |-
+  TODO
+  **NOTE:** the `/` is interchangable with the `:` in target names
+# Example usage
+examples: |-
+  Here are some real world examples:
+  - [`github-authorized-keys`](https://github.com/cloudposse/github-authorized-keys/) - A Golang project that leverages `docker/%`, `go/%`, `travis/%` targets
+  - [`charts`](https://github.com/cloudposse/charts/) - A collection of Helm Charts that leverages `docker/%` and `helm/%` targets
+  - [`bastion`](https://github.com/cloudposse/bastion/) - A docker image that leverages `docker/%` and `bash/lint` targets
+  - [`terraform-null-label`](https://github.com/cloudposse/terraform-null-label/) - A terraform module that leverages `terraform/%` targets
+# How to get started quickly
+quickstart: |-
+  TODO
+# Other files to include in this README from the project folder
+include:
+  - "docs/terraform.md"
+# Contributors to this project
+contributors:
+  - name: "Matt Childs"
+    github: "mattchilds1"
+  - name: "James Woolfenden"
+    github: "jameswoolfenden"

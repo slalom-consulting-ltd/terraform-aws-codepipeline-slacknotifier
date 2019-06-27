@@ -7,3 +7,8 @@ variable "pipeline_name" {
   type        = "string"
   description = "Name of the pipeline to send notifications from"
 }
+
+variable "aws_account_no" {
+  type        = "string"
+  description = ""
+}
