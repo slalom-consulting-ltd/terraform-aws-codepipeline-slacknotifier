@@ -42,6 +42,9 @@ description: |-
   A collection of AWS resources to send AWS [`Codebuild`](https://aws.amazon.com/codebuild/) build success/failure's to slack using a Lambda function.
 introduction: |-
   AWS [`Codebuild`](https://aws.amazon.com/codebuild/) doesn't have a large ecoysystem of plugins like Jenkins or other orchestration tools. This plugin module is intended to give you the basic functionality of notifying a Slack channel with build status's to enable ChatOps.
+  This repository intentionally doesn't include the deployment of the Lambda function which notifies Slack, this is so that many pipelines can utilise one lambda function.
+
+  This module will work with the following Slack Notifier lambda function https://github.com/mattchilds1/golang-aws-lambda-slacknotifier
 
 usage: |-
   Include this repository as a module in your existing terraform code:
