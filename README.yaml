@@ -25,40 +25,37 @@ badges:
     image: "https://img.shields.io/github/release/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier.svg"
     url: "https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier/releases/latest"
 related:
+  - name: "golang-aws-lambda-slacknotifier"
+    description: "Simple Lambda function written in golang to notify an incoming slack webhook from an SNS topic subscription."
+    url: https://github.com/mattchilds1/golang-aws-lambda-slacknotifier
+references:
+  - name: "Wikipedia - Test Harness"
+    description: 'The `build-harness` is similar in concept to a "Test Harness"'
+    url: "https://en.wikipedia.org/wiki/Test_harness"
   - name: "Packages"
     description: "Cloud Posse installer and distribution of native apps"
     url: "https://github.com/cloudposse/packages"
   - name: "Dev Harness"
     description: "Cloud Posse Local Development Harness"
-    url: "https://github.com/cloudposse/dev"
-# References
-references:
-  - name: "Wikipedia - Test Harness"
-    description: 'The `build-harness` is similar in concept to a "Test Harness"'
-    url: "https://en.wikipedia.org/wiki/Test_harness"
-# Short description of this project
+    url: "https://github.com/cloudposse/dev"  
 description: |-
   A collection of AWS resources to send AWS [`Codebuild`](https://aws.amazon.com/codebuild/) build success/failure's to slack using a Lambda function.
-# Introduction to the project
 introduction: |-
-  Some text here
+  AWS [`Codebuild`](https://aws.amazon.com/codebuild/) doesn't have a large ecoysystem of plugins like Jenkins or other orchestration tools. This plugin module is intended to give you the basic functionality of notifying a Slack channel with build status's to enable ChatOps.
+
 usage: |-
-  TODO
-  **NOTE:** the `/` is interchangable with the `:` in target names
-# Example usage
-examples: |-
-  Here are some real world examples:
-  - [`github-authorized-keys`](https://github.com/cloudposse/github-authorized-keys/) - A Golang project that leverages `docker/%`, `go/%`, `travis/%` targets
-  - [`charts`](https://github.com/cloudposse/charts/) - A collection of Helm Charts that leverages `docker/%` and `helm/%` targets
-  - [`bastion`](https://github.com/cloudposse/bastion/) - A docker image that leverages `docker/%` and `bash/lint` targets
-  - [`terraform-null-label`](https://github.com/cloudposse/terraform-null-label/) - A terraform module that leverages `terraform/%` targets
-# How to get started quickly
-quickstart: |-
-  TODO
-# Other files to include in this README from the project folder
-include:
-  - "docs/terraform.md"
-# Contributors to this project
+  Include this repository as a module in your existing terraform code:
+  
+    ```hcl
+    module "slacknotifier" {
+      source     = "Path/To/Module"
+      function_name  = "${var.function_name}"
+      pipeline_name = "${var.pipeline_name}"
+      environment = "${var.environment}"
+    }
+    ```
+   see examples folder for examples. 
+
 contributors:
   - name: "Matt Childs"
     github: "mattchilds1"

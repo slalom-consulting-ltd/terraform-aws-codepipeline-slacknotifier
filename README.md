@@ -4,7 +4,7 @@
 
 terraform-aws-codepipeline-slacknotifier
 
- [![terraform-aws-codepipeline-slacknotifier](https://travis-ci.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier.svg?branch=master)](https://travis-ci.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier) [![Latest Release](https://img.shields.io/github/release/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier.svg)](https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier/releases/latest)
+[![terraform-aws-codepipeline-slacknotifier](https://travis-ci.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier.svg?branch=master)](https://travis-ci.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier) [![Latest Release](https://img.shields.io/github/release/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier.svg)](https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier/releases/latest)
 
 A collection of AWS resources to send AWS [`Codebuild`](https://aws.amazon.com/codebuild/) build success/failure's to slack using a Lambda function.
 
@@ -16,45 +16,36 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Introduction
 
-Some text here
+AWS [`Codebuild`](https://aws.amazon.com/codebuild/) doesn't have a large ecoysystem of plugins like Jenkins or other orchestration tools. This plugin module is intended to give you the basic functionality of notifying a Slack channel with build status's to enable ChatOps.
 
 ## Usage
 
-TODO
-**NOTE:** the `/` is inter-changable with the `:` in target names
+Include this repository as a module in your existing terraform code:
 
-## Quick Start
+```hcl
+module "slacknotifier" {
+  source     = "Path/To/Module"
+  function_name  = "${var.function_name}"
+  pipeline_name = "${var.pipeline_name}"
+  environment = "${var.environment}"
+}
+```
 
-TODO
-
-## Examples
-
-Here are some real world examples:
-- [`github-authorized-keys`](https://github.com/cloudposse/github-authorized-keys/) - A Golang project that leverages `docker/%`, `go/%`, `travis/%` targets
-- [`charts`](https://github.com/cloudposse/charts/) - A collection of Helm Charts that leverages `docker/%` and `helm/%` targets
-- [`bastion`](https://github.com/cloudposse/bastion/) - A docker image that leverages `docker/%` and `bash/lint` targets
-- [`terraform-null-label`](https://github.com/cloudposse/terraform-null-label/) - A terraform module that leverages `terraform/%` targets
-
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| aws\_account\_no |  | string | n/a | yes |
-| function\_name | Name of Lambda function which will be used to notify slack incoming webhook. | string | n/a | yes |
-| pipeline\_name | Name of the pipeline to send notifications from | string | n/a | yes |
+see examples folder for examples.
 
 ## Related Projects
 
 Check out these related projects.
 
-- [Packages](https://github.com/cloudposse/packages) - Cloud Posse installer and distribution of native apps
-- [Dev Harness](https://github.com/cloudposse/dev) - Cloud Posse Local Development Harness
+- [golang-aws-lambda-slacknotifier](https://github.com/mattchilds1/golang-aws-lambda-slacknotifier) - Simple Lambda function written in golang to notify an incoming slack webhook from an SNS topic subscription.
 
 ## References
 
 For additional context, refer to some of these links.
 
 - [Wikipedia - Test Harness](https://en.wikipedia.org/wiki/Test_harness) - The `build-harness` is similar in concept to a "Test Harness"
+- [Packages](https://github.com/cloudposse/packages) - Cloud Posse installer and distribution of native apps
+- [Dev Harness](https://github.com/cloudposse/dev) - Cloud Posse Local Development Harness
 
 ## Help
 
@@ -97,22 +88,22 @@ See [LICENSE](LICENSE) for full details.
 
 ### Contributors
 
-|  [![Matt Childs][mattchilds1_avatar]][mattchilds1_homepage]<br/>[Matt Childs][mattchilds1_homepage] | [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
-|---|---|
+| [![Matt Childs][mattchilds1_avatar]][mattchilds1_homepage]<br/>[Matt Childs][mattchilds1_homepage] | [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 
-  [mattchilds1_homepage]: https://github.com/mattchilds1
-  [mattchilds1_avatar]: https://github.com/mattchilds1.png?size=150
-  [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
-  [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 
+[mattchilds1_homepage]: https://github.com/mattchilds1
+[mattchilds1_avatar]: https://github.com/mattchilds1.png?size=150
+[jameswoolfenden_homepage]: https://github.com/jameswoolfenden
+[jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
-[github]: https://github.com/slalom-consulting-ltd
+[github]: https://github.com/jameswoolfenden
 [linkedin]: https://www.linkedin.com/company/slalom-consulting/
 [twitter]: https://twitter.com/Slalom
-
 [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-codepipeline-slacknotifier&url=https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-codepipeline-slacknotifier&url=https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier
 [share_reddit]: https://reddit.com/submit/?url=https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier
 [share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier
+[share_googleplus]: https://plus.google.com/share?url=https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier
 [share_email]: mailto:?subject=terraform-aws-codepipeline-slacknotifier&body=https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier

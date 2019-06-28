@@ -2,7 +2,7 @@
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| aws\_account\_no |  | string | n/a | yes |
-| function\_name | Name of Lambda function which will be used to notify slack incoming webhook. | string | n/a | yes |
-| pipeline\_name | Name of the pipeline to send notifications from | string | n/a | yes |
+| aws_account_no | - | string | - | yes |
+| function_name | Name of Lambda function which will be used to notify slack incoming webhook. | string | - | yes |
+| pipeline_name | Name of the pipeline to send notifications from | string | - | yes |
 
