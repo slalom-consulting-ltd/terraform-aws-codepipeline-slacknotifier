@@ -1,0 +1,18 @@
+module "codepipeline" {
+  source                 = "jameswoolfenden/codepipeline/aws"
+  version                = "0.1.7"
+  artifact_store         = "${var.artifact_store}"
+  bucketname             = "${lookup(var.artifact_store[0],"location")}"
+  build_timeout          = "${var.build_timeout}"
+  common_tags            = "${var.common_tags}"
+  description            = "${var.description}"
+  encryption_disabled    = "true"
+  env                    = "${var.env}"
+  environment            = "${var.environment}"
+  force_artifact_destroy = "${var.force_artifact_destroy}"
+  name                   = "${var.pipeline_name}"
+  projectroot            = "${var.projectroot}"
+  sourcecode             = "${var.sourcecode}"
+  stage                  = "${var.stage}"
+  type                   = "${var.type}"
+}
