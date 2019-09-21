@@ -1,20 +1,17 @@
-function_name = "slack_notifier_lambda" // Name of Lambda function deployed from: https://github.com/mattchilds1/golang-aws-lambda-slacknotifier
-
+function_name  = "slack_notifier_lambda" // Name of Lambda function deployed from: https://github.com/mattchilds1/golang-aws-lambda-slacknotifier
 aws_account_no = "553700203877"
 
-type = "CODEPIPELINE"
-
-artifact_store = [{
+artifact_store = {
   location = "codepipeline-eu-west-1-163714928765"
   type     = "S3"
-}]
+}
 
 pipeline_name = "cron-poll"
 
-stage = [{
+stages = [{
   name = "Source"
 
-  action = [{
+  action = {
     name     = "Source"
     category = "Source"
     owner    = "AWS"
@@ -26,14 +23,14 @@ stage = [{
       PollForSourceChanges = "false"
       RepositoryName       = "cron-poll"
     }
-
+    input_artifacts  = []
     output_artifacts = ["SourceArtifact"]
-  }]
-},
+  }
+  },
   {
     name = "Build"
 
-    action = [{
+    action = {
       name             = "Build"
       category         = "Build"
       owner            = "AWS"
@@ -45,52 +42,27 @@ stage = [{
       configuration = {
         ProjectName = "cron-poll"
       }
-    }]
+    }
   },
   {
     name = "Deploy"
 
-    action = [{
-      name            = "Deploy"
-      category        = "Deploy"
-      owner           = "AWS"
-      provider        = "ECS"
-      version         = "1"
-      input_artifacts = ["BuildArtifact"]
-
+    action = {
+      name             = "Deploy"
+      category         = "Deploy"
+      owner            = "AWS"
+      provider         = "ECS"
+      version          = "1"
+      input_artifacts  = ["BuildArtifact"]
+      output_artifacts = []
       configuration = {
         ClusterName = "test"
         ServiceName = "cron-poll"
       }
-    }]
-  },
+    }
+  }
 ]
-
-environment = [{
-  compute_type    = "BUILD_GENERAL1_SMALL"
-  image           = "aws/codebuild/docker:18.09.0-1.7.0"
-  type            = "LINUX_CONTAINER"
-  privileged_mode = "true"
-}]
 
 common_tags = {
   name = "aws-codebuild-container"
 }
-
-sourcecode = [{
-  type      = "CODEPIPELINE"
-  buildspec = ""
-  location  = "0"
-}]
-
-build_timeout = 60
-
-description = ""
-
-env = "dev"
-
-projectroot = "core"
-
-force_artifact_destroy = true
-
-type = "CODEPIPELINE"

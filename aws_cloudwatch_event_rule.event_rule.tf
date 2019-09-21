@@ -1,5 +1,5 @@
 resource "aws_cloudwatch_event_rule" "event_rule" {
-  name = "${var.pipeline_name}"
+  name = var.pipeline_name
 
   event_pattern = <<PATTERN
 {
