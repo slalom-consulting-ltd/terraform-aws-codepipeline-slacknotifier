@@ -1,4 +1,4 @@
-# exampleA
+# examplea
 
 This example deploys a AWS CodePipeline pipeline from the module:
 
@@ -18,14 +18,14 @@ The lambda function name should be set in the 'function_name' variable in terraf
 
 With an AWS Profile setup and pre-requisite tasks complete, run:
 
-```
+```cli
 terraform init
 ```
 
-```
+```cli
 terraform plan
 ```
 
-```
+```cli
 terraform apply
 ```

@@ -1,5 +1,5 @@
 resource "aws_sns_topic_policy" "default" {
-  arn = "${aws_sns_topic.slack_notifier.arn}"
+  arn = aws_sns_topic.slack_notifier.arn
 
   policy = <<POLICY
   {
