@@ -12,11 +12,11 @@ https://github.com/mattchilds1/golang-aws-lambda-slacknotifier
 
 The reason this Lambda function isn't deployed as part of this module, is so that one lambda function can be used with many pipelines.
 
-The lambda function name should be set in the 'function_name' variable in terraform.tfvars.
+The lambda function name should be set in the 'function_name' variable in **examplea.auto.tfvars**.
 
 ## Running this example
 
-With an AWS Profile setup and pre-requisite tasks complete, run:
+With an AWS Profile set-up and pre-requisite tasks complete, run:
 
 ```cli
 terraform init
