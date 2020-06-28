@@ -12,3 +12,8 @@ variable "aws_account_no" {
   type        = string
   description = ""
 }
+
+variable "kms_master_key_id" {
+  type    = string
+  default = "alias/aws/sns"
+}

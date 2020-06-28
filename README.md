@@ -33,6 +33,10 @@ Include this repository as a module in your existing terraform code:
 
  see examples folder for examples.
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
+
 ## Providers
 
 | Name | Version |
@@ -42,9 +46,10 @@ Include this repository as a module in your existing terraform code:
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | aws\_account\_no | n/a | `string` | n/a | yes |
 | function\_name | Name of Lambda function which will be used to notify slack incoming webhook. | `string` | n/a | yes |
+| kms\_master\_key\_id | n/a | `string` | `"alias/aws/sns"` | no |
 | pipeline\_name | Name of the pipeline to send notifications from | `string` | n/a | yes |
 
 ## Outputs
@@ -112,8 +117,8 @@ under the License.
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
-[linkedin]: https://www.linkedin.com/company/slalom-consulting/
-[twitter]: https://twitter.com/Slalom
+[linkedin]: https://www.linkedin.com/in/jameswoolfenden/
+[twitter]: https://twitter.com/JimWoolfenden
 
 [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-codepipeline-slacknotifier&url=https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-codepipeline-slacknotifier&url=https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier
