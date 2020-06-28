@@ -1,3 +1,3 @@
 output "SNS_Topic" {
-  value = module
+  value = module.slack
 }
