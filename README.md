@@ -2,7 +2,7 @@
 
 terraform-aws-codepipeline-slacknotifier
 
- [![terraform-aws-codepipeline-slacknotifier](https://travis-ci.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier.svg?branch=master)](https://travis-ci.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier)
+ [![terraform-aws-codepipeline-slacknotifier](https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier)
  [![Latest Release](https://img.shields.io/github/release/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier.svg)](https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier/releases/latest)
 
 A collection of AWS resources to send AWS [Codebuild](https://aws.amazon.com/codebuild/) build success/failure's to slack using a Lambda function.
