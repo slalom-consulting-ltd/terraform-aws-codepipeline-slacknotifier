@@ -2,8 +2,10 @@
 
 terraform-aws-codepipeline-slacknotifier
 
- [![terraform-aws-codepipeline-slacknotifier](https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier)
- [![Latest Release](https://img.shields.io/github/release/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier.svg)](https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier/releases/latest)
+[![Build Status](https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier)
+[![Latest Release](https://img.shields.io/github/release/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier.svg)](https://github.com/slalom-consulting-ltd/terraform-aws-codepipeline-slacknotifier/releases/latest)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 
 A collection of AWS resources to send AWS [Codebuild](https://aws.amazon.com/codebuild/) build success/failure's to slack using a Lambda function.
 
