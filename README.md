@@ -34,7 +34,6 @@ Include this repository as a module in your existing terraform code:
 see examples folder for examples.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
@@ -42,23 +41,23 @@ No requirements.
 ## Providers
 
 | Name | Version |
-| ---- | ------- |
-| aws  | n/a     |
+|------|---------|
+| aws | n/a |
 
 ## Inputs
 
-| Name              | Description                                                                  | Type     | Default           | Required |
-| ----------------- | ---------------------------------------------------------------------------- | -------- | ----------------- | :------: |
-| aws_account_no    | n/a                                                                          | `string` | n/a               |   yes    |
-| function_name     | Name of Lambda function which will be used to notify slack incoming webhook. | `string` | n/a               |   yes    |
-| kms_master_key_id | n/a                                                                          | `string` | `"alias/aws/sns"` |    no    |
-| pipeline_name     | Name of the pipeline to send notifications from                              | `string` | n/a               |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| aws\_account\_no | n/a | `string` | n/a | yes |
+| function\_name | Name of Lambda function which will be used to notify slack incoming webhook. | `string` | n/a | yes |
+| kms\_master\_key\_id | n/a | `string` | `"alias/aws/sns"` | no |
+| pipeline\_name | Name of the pipeline to send notifications from | `string` | n/a | yes |
 
 ## Outputs
 
-| Name      | Description |
-| --------- | ----------- |
-| SNS_Topic | n/a         |
+| Name | Description |
+|------|-------------|
+| SNS\_Topic | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
