@@ -13,17 +13,17 @@ variable "aws_account_no" {
 }
 
 variable "stages" {
-  type        = list
+  type        = list(any)
   description = "Build stage definition"
 }
 
 variable "common_tags" {
-  type        = map
+  type        = map(any)
   description = "Implements the common tags scheme"
 }
 
 variable "artifact_store" {
-  type = map
+  type = map(any)
 }
 
 variable "description" {

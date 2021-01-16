@@ -66,3 +66,5 @@ override.tf.json
 #docs
 *.orig
 *.bak
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
